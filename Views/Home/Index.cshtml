@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ตัวอย่างการเขียน .NET CORE แบบ MVC อย่างง่าย</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script language="javascript" src="js/jquery-1.2.6.min.js"></script>  
+		    <script type="text/javascript">  
+    function chk_form(){  
+        $(":input + span.require").remove();  
+        $(":input").each(function(){  
+            $(this).each(function(){      
+                if($(this).val()==""){  
+                    $(this).after("<span class=require>« จำเป็นต้องกรอก</span>");  
+                }  
+            });  
+        });  
+        if($(":input").next().is(".require")==false){  
+            return true;  
+        }else{  
+            return false;  
+        }  
+    }  
+    </script>  
+	<style type="text/css">  
+	.require{  
+    height:20px;  
+    color:#FF0000;  
+    padding-left:5px;  
+    padding-right:5px;  
+    font-size:12px;  
+    line-height:15px;  
+    width:100px;  
+    float:none;  
+}  
+</style> 
+	</head>
+	<body>
+		
+		<div class="container">
+	<form action="/result" method="POST" onsubmit="return chk_form()">
+	<div class="form-group">
+	<div class="radio">
+  <label>
+    <input type="radio" name="order" id="order" value="1" checked>
+    1.หาค่าเฉลี่ย
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="order" id="order" value="2">
+    2.หาค่ามัธยฐาน
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="order" id="order" value="3">
+    3.หาผลรวมทั้งหมด
+  </label>
+</div>
+    <label for="exampleInputEmail1">กรุณากรอกตัวเลขโดย 1 ตัวต่อ 1 ลูกนํ้า</label>
+    <input type="text" class="form-control" name="inputnumber" placeholder="ตัวอย่าง 1,2,3,11,100,1000,10000"><br>
+	<input class="btn btn-primary" type="submit" name="Submit" value="ส่งข้อมูล" />
+  </div>
+		</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

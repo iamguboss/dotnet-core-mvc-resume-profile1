@@ -1,0 +1,24 @@
+{
+	"buildOptions": {
+		"emitEntryPoint": true,
+		"preserveCompilationContext": true
+	},
+	"dependencies": {
+		"Microsoft.AspNetCore.Mvc": "*",
+		"Microsoft.AspNetCore.Mvc.Core": "*",
+		"Microsoft.AspNetCore.Hosting": "*",
+		"Microsoft.AspNetCore.StaticFiles": "*",
+		"Microsoft.AspNetCore.Server.Kestrel": "*"
+	},
+	"frameworks": {
+		"netcoreapp1.0": {
+			"imports": ["dnxcore50"],
+			"dependencies": {
+				"Microsoft.NETCore.App": {
+					"version": "*",
+					"type": "platform"
+				}
+			}
+		}
+	}
+}
